@@ -3,11 +3,6 @@
   box-sizing: border-box;
 }
 
-.navBarStyle {
-  font-size: 30px;
-  color: aqua;
-}
-
 .logo {
   width: 200px;
   height: 200px;
@@ -28,3 +23,36 @@
   font-family: 'Times New Roman', Times, serif;
   background-color: rgb(204, 204, 204);
 }
+
+.estructuraItems {
+  display: grid; 
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 16px; 
+  padding: 16px; 
+}
+
+.cardStyle {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.productDetail {
+  display: flex;
+  flex-direction: column;
+  margin-left: 600px;
+  margin-top: 50px;
+  width: 500px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
