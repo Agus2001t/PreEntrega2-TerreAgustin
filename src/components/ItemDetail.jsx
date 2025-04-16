@@ -1,20 +1,44 @@
-import React from 'react'
+import React, {useContext, useState} from 'react'
 import ItemCounter from './ItemCounter';
+import { CartContext } from '../context/CartContext'
+import { Link } from 'react-router-dom'
+import Swal from 'sweetalert2';
 
 const ItemDetail = ({product}) => {
-    const onAdd = (cantidad) => {
-        alert(`Agregaste ${cantidad} unidades`)
-    }
+    const {addItem} = useContext(CartContext)
+    const [buyed, setBuyed] = useState(false)
+
+
+    const onAdd = (quantity) => {
+        addItem(product, quantity)
+        setBuyed(true)
+
+        const unitLabel = quantity === 1 ? 'unidad' : 'unidades';
+        Swal.fire({
+            title: 'Producto agregado 🛒',
+            text: `Agregaste ${quantity} ${unitLabel}`,
+            icon: 'success',
+            confirmButtonText: 'Ok'
+          });
+        };
+    
+    
 
     return (
         <div className='productDetail'>
-            <img src={product.img} alt="Imagen" />
+            <img src={product.img} alt={product.name} />
             <h1>{product.name}</h1>
             <h4>{product.category}</h4>
             <p>{product.description}</p>
             <p>{product.price}</p>
             <p>{product.stock}</p>
-            <ItemCounter stock={product.stock} onAdd={onAdd}/>
+            <Link to='/'>Volver</Link>
+            {buyed ? (
+                <div>
+                    <Link to='/'>Seguir Comprando</Link>
+                    <Link to='/cart'>Ir al Carrito</Link>
+                </div>
+            ) : <ItemCounter stock={product.stock} onAdd={onAdd}/>}  
         </div>
     )
 }
