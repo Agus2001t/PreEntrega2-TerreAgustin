@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 
 const EmptyCart = () => {
   return (
-    <div>
-        <h1>Tu carrito está vacío</h1>
+    <div className='emptyCart'>
+        <h1>Tu carrito está vacío 🫤</h1>
         <Link to='/'>Ir a la página principal</Link>
     </div>
   )

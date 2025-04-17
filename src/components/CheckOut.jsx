@@ -70,9 +70,9 @@ const CheckOut = () => {
 
 
   return (
-    <div>
+    <div className='checkout'>
       {orderId ? (
-        <h2>Gracias por su compra!</h2>
+        <h2>Gracias por su compra! 😁</h2>
       ) : (
       <>
         <h1>Complete sus datos</h1>

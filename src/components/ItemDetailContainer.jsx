@@ -3,6 +3,7 @@ import ItemDetail from './ItemDetail'
 import { useParams } from 'react-router-dom'
 import { collection, doc, getDoc } from 'firebase/firestore'
 import { db } from '../service/firebase'
+import LoaderComponent from './LoaderComponent'
 
 const ItemDetailContainer = () => {
     const [product, setProduct] = useState({})
@@ -72,7 +73,7 @@ const ItemDetailContainer = () => {
 
   return (
     <div>
-        {loading ? <p>Cargando...</p>:<ItemDetail product={product}/>}
+        {loading ? <LoaderComponent/> :<ItemDetail product={product}/>}
     </div>
   )
 }

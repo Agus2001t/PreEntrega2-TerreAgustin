@@ -2,7 +2,7 @@ import React from 'react';
 
 const AcercaDe = (props) => {
     return (
-        <main>
+        <main className='acercaDe'>
             <div>
                 <h1 className="greeting">{props.greeting}</h1>
                 <p>

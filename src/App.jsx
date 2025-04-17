@@ -24,7 +24,7 @@ function App() {
         <Route path='/ofertas' element= {<Ofertas greeting= "Ofertas"/>}/>
         <Route path='/nosotros' element= {<AcercaDe greeting= "¿Quiénes Somos?"/>}/>
         <Route path='/product/:productId' element= {<ItemDetailContainer/>}/>
-        <Route path='/cart' element= {<CartContainer/>}/>
+        <Route path='/cart' element= {<CartContainer greeting= "Carrito 🛒"/>}/>
         <Route path='/checkout' element= {<Checkout/>}/>
         <Route path='*' element= {<ErrorPage/>}/>
       </Routes>

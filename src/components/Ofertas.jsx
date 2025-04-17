@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { collection, getDocs, query, where } from 'firebase/firestore'
 import { db } from '../service/firebase'
 import ItemList from './ItemList'
+import LoaderComponent from './LoaderComponent'
 
 const Ofertas = (props) => {
   const [ofertas, setOfertas] = useState([])
@@ -27,12 +28,12 @@ const Ofertas = (props) => {
 
   return (
     <main>
-      <div>
+      <div className='ofertas'>
         <h1 className="greeting">{props.greeting}</h1>
         {loading ? (
-          <p>Cargando...</p>
+          <LoaderComponent/>
         ) : ofertas.length === 0 ? (
-          <p>No hay ofertas</p>
+          <p>No hay ofertas disponibles 😔</p>
         ) : (
           <ItemList data={ofertas} />
         )}

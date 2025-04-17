@@ -3,6 +3,7 @@ import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from '../service/firebase';
+import LoaderComponent from "./LoaderComponent";
 
 const ItemListContainer = (props) => {
   const [data, setData] = useState([]);
@@ -36,7 +37,7 @@ const ItemListContainer = (props) => {
     <main>
       <div>
         <h1 className="greeting">{props.greeting}{categoryId && ` ${categoryId}`}</h1>
-        {loading ? <p>Cargando...</p> : <ItemList data={data} />}
+        {loading ? <LoaderComponent/> : <ItemList data={data} />}
       </div>
     </main>
   );

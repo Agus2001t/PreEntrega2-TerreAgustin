@@ -5,12 +5,12 @@ const CartItem = ({producto}) => {
     const {removeItem} = useCart()
 
   return (
-    <div>
-        <img src={producto.id} alt={producto.name} />
+    <div className='cartItem'>
+        <img src={producto.img} alt={producto.name} />
         <h3>{producto.name}</h3>
-        <p></p>
-        <p></p>
-        <button></button>
+        <p>Cantidad: {producto.quantity}</p>
+        <p>$ {producto.price},00</p>
+        <button onClick={()=>removeItem(producto.id)}>X</button>
     </div>
   )
 }

@@ -30,8 +30,8 @@ const ItemDetail = ({product}) => {
             <h1>{product.name}</h1>
             <h4>{product.category}</h4>
             <p>{product.description}</p>
-            <p>{product.price}</p>
-            <p>{product.stock}</p>
+            <p>${product.price},00</p>
+            <p>Stock: {product.stock}</p>
             <Link to='/'>Volver</Link>
             {buyed ? (
                 <div>
