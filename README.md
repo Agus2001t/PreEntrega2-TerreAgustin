@@ -1,8 +1,46 @@
-# React + Vite
+# 🪵 Villa Pino Furniture Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Villa Pino Furniture Store es una tienda online desarrollada en React dedicada a la venta de muebles de pino artesanales. El proyecto combina una estética rústica con una experiencia de usuario moderna, conectando con Firebase para la gestión dinámica de productos y órdenes de compra.
 
-Currently, two official plugins are available:
+## 📦 Tecnologías utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ⚛️ **React**
+- 🔥 **Firebase (Firestore)**
+- 🎨 **React-Bootstrap**
+- 🍭 **SweetAlert2**
+- 🛒 **Context API**
+- 🌐 **React Router Dom**
+
+---
+
+## ✨ Funcionalidades
+
+- ✅ Listado de productos con filtros por categoría
+- ✅ Detalle individual de productos
+- ✅ Carrito de compras con suma total
+- ✅ Formulario de checkout con validación
+- ✅ Generación de órdenes en Firebase
+- ✅ Actualización de stock en tiempo real
+- ✅ Sección de Ofertas
+- ✅ Mensajes y alertas con SweetAlert2
+- ✅ Diseño responsive
+
+---
+
+## ⚙️ Instalación
+
+1. **Cloná el repositorio**
+git clone https://github.com/Agus2001t/ProyectoFinal-TerreAgustin.git
+
+2. **Instalá las dependencias**
+npm install
+
+3. **Configurá Firebase**
+Crea un archivo firebase.jsx en src/service/ con tu configuración de Firebase.
+
+4. **Levantá el proyecto**
+npm run dev
+
+---
+
+Desarrollado por Agustín Terré
